@@ -15,11 +15,11 @@ async function seedProducts() {
 
     await Promise.all(promises);
     debug(chalk.green(`${promises.length} products have been created succesfully`)); // prettier-ignore
-    return process.exit(0);
+    return "success seed produtcs"
   } catch (error) {
     debug(chalk.red(error));
     process.exit(1);
   }
 }
 
-seedProducts();
+module.exports = seedProducts;

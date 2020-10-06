@@ -37,11 +37,11 @@ async function seedUsers() {
     });
 
     await Promise.all(promises);
-    return process.exit(0);
+    return "success seed users"
   } catch (error) {
     debug(chalk.red(error));
     process.exit(1);
   }
 }
 
-seedUsers();
+module.exports = seedUsers;

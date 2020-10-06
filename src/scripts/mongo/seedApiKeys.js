@@ -40,11 +40,11 @@ async function seedApiKeys() {
 
     await Promise.all(promises);
     debug(chalk.green(`${promises.length} api keys have been created succesfully`)); // prettier-ignore
-    return process.exit(0);
+    return "success seed api keys"
   } catch (error) {
     debug(chalk.red(error));
     process.exit(1);
   }
 }
 
-seedApiKeys();
+module.exports = seedApiKeys;
